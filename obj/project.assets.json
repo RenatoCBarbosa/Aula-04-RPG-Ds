@@ -2,6 +2,7 @@
   "version": 3,
   "targets": {
     "net9.0": {
+<<<<<<< HEAD
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -60,6 +61,8 @@
           }
         }
       },
+=======
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
       "Microsoft.AspNetCore.OpenApi/9.0.1": {
         "type": "package",
         "dependencies": {
@@ -79,6 +82,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+<<<<<<< HEAD
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "type": "package",
         "compile": {
@@ -944,6 +948,8 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+=======
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
       "Microsoft.OpenApi/1.6.17": {
         "type": "package",
         "compile": {
@@ -956,6 +962,7 @@
             "related": ".pdb;.xml"
           }
         }
+<<<<<<< HEAD
       },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
@@ -1624,10 +1631,13 @@
             "rid": "win"
           }
         }
+=======
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
       }
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "Azure.Core/1.38.0": {
       "sha512": "IuEgCoVA0ef7E4pQtpC3+TkPbzaoQfa77HlfJDmfuaJUCVJmn7fT0izamZiryW5sYUFKizsftIxMkXKbgIcPMQ==",
       "type": "package",
@@ -1684,6 +1694,8 @@
         "logo.png"
       ]
     },
+=======
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
     "Microsoft.AspNetCore.OpenApi/9.0.1": {
       "sha512": "xRJe8UrLnOGs6hOBrT/4r74q97626H0mABb/DV0smlReIx6uQCENAe+TUqF6hD3NtT4sB+qrvWhAej6kxPxgew==",
       "type": "package",
@@ -1700,6 +1712,7 @@
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "sha512": "3aeMZ1N0lJoSyzqiP03hqemtb1BijhsJADdobn/4nsMJ8V1H+CrpuduUe4hlRdx+ikBQju1VGjMD1GJ3Sk05Eg==",
       "type": "package",
@@ -3469,6 +3482,8 @@
         "runtime.json"
       ]
     },
+=======
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
     "Microsoft.OpenApi/1.6.17": {
       "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
       "type": "package",
@@ -3483,6 +3498,7 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+<<<<<<< HEAD
     },
     "Microsoft.SqlServer.Server/1.0.0": {
       "sha512": "N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
@@ -4733,13 +4749,19 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+=======
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+<<<<<<< HEAD
       "Microsoft.AspNetCore.OpenApi >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.3"
+=======
+      "Microsoft.AspNetCore.OpenApi >= 9.0.1"
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
     ]
   },
   "packageFolders": {
@@ -4796,6 +4818,7 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.1, )"
+<<<<<<< HEAD
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -4806,6 +4829,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[9.0.3, )"
+=======
+>>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
           }
         },
         "imports": [
