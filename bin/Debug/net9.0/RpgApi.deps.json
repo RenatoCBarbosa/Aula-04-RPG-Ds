@@ -8,19 +8,14 @@
     ".NETCoreApp,Version=v9.0": {
       "RpgApi/1.0.0": {
         "dependencies": {
-<<<<<<< HEAD
           "Microsoft.AspNetCore.OpenApi": "9.0.1",
           "Microsoft.EntityFrameworkCore.Design": "9.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3"
-=======
-          "Microsoft.AspNetCore.OpenApi": "9.0.1"
->>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
         },
         "runtime": {
           "RpgApi.dll": {}
         }
       },
-<<<<<<< HEAD
       "Azure.Core/1.38.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
@@ -64,8 +59,6 @@
           }
         }
       },
-=======
->>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
       "Microsoft.AspNetCore.OpenApi/9.0.1": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.17"
@@ -77,7 +70,6 @@
           }
         }
       },
-<<<<<<< HEAD
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -717,8 +709,6 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-=======
->>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
       "Microsoft.OpenApi/1.6.17": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -726,7 +716,6 @@
             "fileVersion": "1.6.17.0"
           }
         }
-<<<<<<< HEAD
       },
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
@@ -1032,8 +1021,6 @@
             "fileVersion": "6.0.21.52210"
           }
         }
-=======
->>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
       }
     }
   },
@@ -1043,7 +1030,6 @@
       "serviceable": false,
       "sha512": ""
     },
-<<<<<<< HEAD
     "Azure.Core/1.38.0": {
       "type": "package",
       "serviceable": true,
@@ -1065,8 +1051,6 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-=======
->>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
     "Microsoft.AspNetCore.OpenApi/9.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1074,7 +1058,6 @@
       "path": "microsoft.aspnetcore.openapi/9.0.1",
       "hashPath": "microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512"
     },
-<<<<<<< HEAD
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1341,15 +1324,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-=======
->>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
     "Microsoft.OpenApi/1.6.17": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
       "path": "microsoft.openapi/1.6.17",
       "hashPath": "microsoft.openapi.1.6.17.nupkg.sha512"
-<<<<<<< HEAD
     },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
@@ -1609,8 +1589,6 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
-=======
->>>>>>> 773cc1770c5ac7d956b237e417ecc565a566d601
     }
   }
 }
