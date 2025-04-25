@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using RpgApi.Controllers;
 using RpgApi.Models;
 using RpgApi.Models.Enuns;
+using RpgApi.Utils;
 
 namespace RpgApi.Data
 {
@@ -18,23 +21,72 @@ namespace RpgApi.Data
         }
 
         public DbSet<Personagem> TB_PERSONAGENS { get; set; }
+        public DbSet<Armas> TB_ARMAS { get; set; }
+        public DbSet<Usuario> TB_USUARIOS { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Personagem>().ToTable("TB_PERSONAGENS");
+            modelBuilder.Entity<Armas>().ToTable("TB_ARMAS");
+            modelBuilder.Entity<Usuario>().ToTable("TB_USUARIOS");
+
+            //Relacionamento One to Many (Um para muitos)
+            modelBuilder.Entity<Usuario>()
+                .HasMany(e => e.Personagens)
+                .WithOne(e => e.Usuario)
+                .HasForeignKey(e => e.UsuarioId)
+                .IsRequired(false);
+
+            //Relacionamento One to One (Um para um)
+            modelBuilder.Entity<Personagem>()
+                .HasMany(e => e.Arma)
+                .WithOne(e => e.Personagem)
+                .HasForeignKey(e => e.PersonagemId)
+                .IsRequired();
 
             modelBuilder.Entity<Personagem>().HasData
             (   
                 //Colar a linha dos sete personagens da
                 //controller PersonagensExemplos aqui
-                new Personagem() { Id = 1, Nome = "Frodo", PontosVida = 100, Forca = 17, Defesa = 23, Inteligencia = 33, Classe = ClasseEnum.Cavaleiro },
-                new Personagem() { Id = 2, Nome = "Sam", PontosVida = 100, Forca = 15, Defesa = 25, Inteligencia = 30, Classe = ClasseEnum.Cavaleiro },
-                new Personagem() { Id = 3, Nome = "Galadriel", PontosVida = 100, Forca = 18, Defesa = 21, Inteligencia = 35, Classe = ClasseEnum.Clerigo },
-                new Personagem() { Id = 4, Nome = "Gandalf", PontosVida = 100, Forca = 18, Defesa = 18, Inteligencia = 37, Classe = ClasseEnum.Mago },
-                new Personagem() { Id = 5, Nome = "Hobbit", PontosVida = 100, Forca = 20, Defesa = 17, Inteligencia = 31, Classe = ClasseEnum.Cavaleiro },
-                new Personagem() { Id = 6, Nome = "Celeborn", PontosVida = 100, Forca = 21, Defesa = 13, Inteligencia = 34, Classe = ClasseEnum.Clerigo },
-                new Personagem() { Id = 7, Nome = "Radagast", PontosVida = 100, Forca = 25, Defesa = 11, Inteligencia = 35, Classe = ClasseEnum.Mago }
+                new Personagem() { Id = 1, Nome = "Frodo", PontosVida = 100, Forca = 17, Defesa = 23, Inteligencia = 33, Classe = ClasseEnum.Cavaleiro, UsuarioId=1},
+                new Personagem() { Id = 2, Nome = "Sam", PontosVida = 100, Forca = 15, Defesa = 25, Inteligencia = 30, Classe = ClasseEnum.Cavaleiro, UsuarioId=1},
+                new Personagem() { Id = 3, Nome = "Galadriel", PontosVida = 100, Forca = 18, Defesa = 21, Inteligencia = 35, Classe = ClasseEnum.Clerigo, UsuarioId=1},
+                new Personagem() { Id = 4, Nome = "Gandalf", PontosVida = 100, Forca = 18, Defesa = 18, Inteligencia = 37, Classe = ClasseEnum.Mago, UsuarioId=1},
+                new Personagem() { Id = 5, Nome = "Hobbit", PontosVida = 100, Forca = 20, Defesa = 17, Inteligencia = 31, Classe = ClasseEnum.Cavaleiro, UsuarioId=1},
+                new Personagem() { Id = 6, Nome = "Celeborn", PontosVida = 100, Forca = 21, Defesa = 13, Inteligencia = 34, Classe = ClasseEnum.Clerigo, UsuarioId=1},
+                new Personagem() { Id = 7, Nome = "Radagast", PontosVida = 100, Forca = 25, Defesa = 11, Inteligencia = 35, Classe = ClasseEnum.Mago, UsuarioId=1}
             );
+
+            modelBuilder.Entity<Armas>().HasData
+            (   
+                new Armas() { Id = 1, Nome = "Espada", Dano = 35, PersonagemId = 1},
+                new Armas() { Id = 2, Nome = "Arco", Dano = 25, PersonagemId = 2 },
+                new Armas() { Id = 3, Nome = "Varinha", Dano = 20, PersonagemId = 3 },
+                new Armas() { Id = 4, Nome = "Cajado", Dano = 34, PersonagemId = 4 },
+                new Armas() { Id = 5, Nome = "Revolver", Dano = 35, PersonagemId = 5 },
+                new Armas() { Id = 6, Nome = "Soco", Dano = 8, PersonagemId = 6 },
+                new Armas() { Id = 7, Nome = "Caneta", Dano = 1, PersonagemId = 7} 
+            );
+
+            //Inicio da criação do usuário padrão.
+            Usuario user = new Usuario();
+            Criptografia.CriarPasswordHash("123456", out byte[] hash, out byte[] salt);
+            user.Id = 1;
+            user.Username = "UsuarioAdmin";
+            user.PasswordString = string.Empty;
+            user.PasswordHash = hash;
+            user.PasswordSalt = salt;
+            user.Perfil = "Admin";
+            user.Email = "seuEmail@gmail.com";
+            user.Latitude = -23.5200241;
+            user.Longitude = -46.596498;
+
+            modelBuilder.Entity<Usuario>().HasData(user);
+            //Fim da criação do usuário padrão
+
+            //Define que se o perfil não for informado, o valor padrão será jogador
+            modelBuilder.Entity<Usuario>().Property(u => u.Perfil).HasDefaultValue("Jogador");
+
         }
 
             //Área para futuros Inserts no banco
@@ -42,5 +94,11 @@ namespace RpgApi.Data
         {
             configurationBuilder.Properties<string>().HaveColumnType("varchar").HaveMaxLength(200);
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.ConfigureWarnings(warnings => 
+            warnings.Ignore(RelationalEventId.PendingModelChangesWarning) );
+        }
     }
-}
+} 
