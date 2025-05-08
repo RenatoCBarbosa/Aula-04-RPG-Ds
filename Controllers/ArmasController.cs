@@ -66,6 +66,13 @@ namespace RpgApi.Controllers
                 {
                     throw new System.Exception("Não vai ter cura!");
                 }
+
+                Personagem p = await _context.TB_PERSONAGENS
+                    .FirstOrDefaultAsync(p => p.Id == novoArma.PersonagemId);
+                
+                if (p == null)
+                    throw new Exception("Não existe personagem com o Id informado");
+
                 await _context.TB_ARMAS.AddAsync(novoArma);
                 await _context.SaveChangesAsync();
 

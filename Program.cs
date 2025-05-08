@@ -13,6 +13,9 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -49,3 +52,5 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+//vlw tmj vd, qual quer coisas estamos ai pra ataque 
