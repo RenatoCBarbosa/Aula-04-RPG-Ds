@@ -7,7 +7,10 @@ using Microsoft.EntityFrameworkCore;
 using RpgApi.Data;
 using RpgApi.Models;
 
+<<<<<<< HEAD
 //teste apagar depois
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
 
 namespace RpgApi.Controllers
 {
@@ -67,6 +70,7 @@ namespace RpgApi.Controllers
                 {
                     throw new System.Exception("Não vai ter cura!");
                 }
+<<<<<<< HEAD
 
                 Personagem p = await _context.TB_PERSONAGENS
                     .FirstOrDefaultAsync(p => p.Id == novoArma.PersonagemId);
@@ -74,6 +78,8 @@ namespace RpgApi.Controllers
                 if (p == null)
                     throw new Exception("Não existe personagem com o Id informado");
 
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
                 await _context.TB_ARMAS.AddAsync(novoArma);
                 await _context.SaveChangesAsync();
 

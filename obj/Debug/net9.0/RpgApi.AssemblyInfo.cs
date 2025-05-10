@@ -13,7 +13,19 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RpgApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3a5770e1e6d462b65bf655e9362abd9685a68a5")]
+=======
+<<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0602dbaed7dad6a7ebe4ff42d58f86eaab2e8a20")]
+=======
+<<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d22fa1f693514e62e6426f568bf69ac5705d7d5")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+269754bdfe59ffebaf4984b8468376421e725412")]
+>>>>>>> 17c43afab9d54a3ef34c6e709faf16c2d4fad1c3
+>>>>>>> fbe030721ffce93b2b451f7bd1c8194b58ba2f91
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
 [assembly: System.Reflection.AssemblyProductAttribute("RpgApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RpgApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

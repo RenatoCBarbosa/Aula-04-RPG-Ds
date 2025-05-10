@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using RpgApi.Models;
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
 
 namespace RpgApi.Utils
 {
@@ -16,6 +19,7 @@ namespace RpgApi.Utils
                 hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
         }
+<<<<<<< HEAD
 
         public static bool VerificarPasswordHash(string password, byte[] hash, byte[] salt)
         {
@@ -38,3 +42,7 @@ namespace RpgApi.Utils
 
     }       
 }
+=======
+    }
+}
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a

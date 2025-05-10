@@ -23,18 +23,24 @@ namespace RpgApi.Data
         public DbSet<Personagem> TB_PERSONAGENS { get; set; }
         public DbSet<Armas> TB_ARMAS { get; set; }
         public DbSet<Usuario> TB_USUARIOS { get; set; }
+<<<<<<< HEAD
         public DbSet<Habilidade> TB_HABILIDADES { get; set; }
         public DbSet<PersonagemHabilidade> TB_PERSONAGENS_HABILIDADES { get; set; }
         public DbSet<Disputa> TB_DISPUTAS { get; set; }
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Personagem>().ToTable("TB_PERSONAGENS");
             modelBuilder.Entity<Armas>().ToTable("TB_ARMAS");
             modelBuilder.Entity<Usuario>().ToTable("TB_USUARIOS");
+<<<<<<< HEAD
             modelBuilder.Entity<Habilidade>().ToTable("TB_HABILIDADES");
             modelBuilder.Entity<PersonagemHabilidade>().ToTable("TB_PERSONAGENS_HABILIDADES");
             modelBuilder.Entity<Disputa>().ToTable("TB_DISPUTAS");
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
 
             //Relacionamento One to Many (Um para muitos)
             modelBuilder.Entity<Usuario>()
@@ -45,9 +51,15 @@ namespace RpgApi.Data
 
             //Relacionamento One to One (Um para um)
             modelBuilder.Entity<Personagem>()
+<<<<<<< HEAD
                 .HasOne(e => e.Arma)
                 .WithOne(e => e.Personagem)
                 .HasForeignKey<Armas>(e => e.PersonagemId)
+=======
+                .HasMany(e => e.Arma)
+                .WithOne(e => e.Personagem)
+                .HasForeignKey(e => e.PersonagemId)
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
                 .IsRequired();
 
             modelBuilder.Entity<Personagem>().HasData
@@ -71,6 +83,7 @@ namespace RpgApi.Data
                 new Armas() { Id = 4, Nome = "Cajado", Dano = 34, PersonagemId = 4 },
                 new Armas() { Id = 5, Nome = "Revolver", Dano = 35, PersonagemId = 5 },
                 new Armas() { Id = 6, Nome = "Soco", Dano = 8, PersonagemId = 6 },
+<<<<<<< HEAD
                 new Armas() { Id = 7, Nome = "Caneta", Dano = 1, PersonagemId = 7 } 
             );
 
@@ -96,6 +109,11 @@ namespace RpgApi.Data
                 new PersonagemHabilidade() { PersonagemId = 6, HabilidadeId = 2 },
                 new PersonagemHabilidade() { PersonagemId = 7, HabilidadeId = 3 }
             );
+=======
+                new Armas() { Id = 7, Nome = "Caneta", Dano = 1, PersonagemId = 7} 
+            );
+
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
             //Inicio da criação do usuário padrão.
             Usuario user = new Usuario();
             Criptografia.CriarPasswordHash("123456", out byte[] hash, out byte[] salt);
@@ -115,6 +133,7 @@ namespace RpgApi.Data
             //Define que se o perfil não for informado, o valor padrão será jogador
             modelBuilder.Entity<Usuario>().Property(u => u.Perfil).HasDefaultValue("Jogador");
 
+<<<<<<< HEAD
             modelBuilder.Entity<Disputa>().HasKey(d => d.Id); //Indicação da chave primária da entidade
             //Abaixo fica o mapeamento do nome das colunas da tabela para as propriedades da classe
             modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("Dt_Disputa");
@@ -122,6 +141,8 @@ namespace RpgApi.Data
             modelBuilder.Entity<Disputa>().Property(d => d.OponenteId).HasColumnName("OponenteId");
             modelBuilder.Entity<Disputa>().Property(d => d.Narracao).HasColumnName("Tx_Narracao");
 
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
         }
 
             //Área para futuros Inserts no banco

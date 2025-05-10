@@ -333,7 +333,10 @@ D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\obj\Debug\net9.0\refint\Rpg
 D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\obj\Debug\net9.0\RpgApi.pdb
 D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\obj\Debug\net9.0\RpgApi.genruntimeconfig.cache
 D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\obj\Debug\net9.0\ref\RpgApi.dll
+<<<<<<< HEAD
 D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\bin\Debug\net9.0\Newtonsoft.Json.dll
 D:\2DS\Thiago\DS\colocarnomeugitdepois\Aula04\RpgApi\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a

@@ -8,7 +8,10 @@
     ".NETCoreApp,Version=v9.0": {
       "RpgApi/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "9.0.4",
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
           "Microsoft.AspNetCore.OpenApi": "9.0.1",
           "Microsoft.EntityFrameworkCore.Design": "9.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3"
@@ -60,6 +63,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.JsonPatch/9.0.4": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -85,6 +89,8 @@
           }
         }
       },
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
       "Microsoft.AspNetCore.OpenApi/9.0.1": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.17"
@@ -1096,6 +1102,7 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.AspNetCore.JsonPatch/9.0.4": {
       "type": "package",
       "serviceable": true,
@@ -1110,6 +1117,8 @@
       "path": "microsoft.aspnetcore.mvc.newtonsoftjson/9.0.4",
       "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.9.0.4.nupkg.sha512"
     },
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
     "Microsoft.AspNetCore.OpenApi/9.0.1": {
       "type": "package",
       "serviceable": true,

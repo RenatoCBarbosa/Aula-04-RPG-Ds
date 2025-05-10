@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "iqXTyoI99BI=",
+=======
+  "dgSpecHash": "odGB21UYLY8=",
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
   "success": true,
   "projectFilePath": "D:\\2DS\\Thiago\\DS\\colocarnomeugitdepois\\Aula04\\RpgApi\\RpgApi.csproj",
   "expectedPackageFiles": [

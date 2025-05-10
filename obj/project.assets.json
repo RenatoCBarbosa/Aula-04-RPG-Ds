@@ -60,6 +60,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.JsonPatch/9.0.4": {
         "type": "package",
         "dependencies": {
@@ -98,6 +99,8 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
       "Microsoft.AspNetCore.OpenApi/9.0.1": {
         "type": "package",
         "dependencies": {
@@ -1751,6 +1754,7 @@
         "logo.png"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.AspNetCore.JsonPatch/9.0.4": {
       "sha512": "UwO32yEyDv3a5FOs6BHOpymKMm6eFi6endbwsL+6RubtMhj6ohfszImuYE15Veg9oyx0LbZ5cdzTrxSIWC7kug==",
       "type": "package",
@@ -1786,6 +1790,8 @@
         "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
     "Microsoft.AspNetCore.OpenApi/9.0.1": {
       "sha512": "xRJe8UrLnOGs6hOBrT/4r74q97626H0mABb/DV0smlReIx6uQCENAe+TUqF6hD3NtT4sB+qrvWhAej6kxPxgew==",
       "type": "package",
@@ -4891,7 +4897,10 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 9.0.4",
+=======
+>>>>>>> b9b6d0615b1e88cc530d227234a60db90d7de33a
       "Microsoft.AspNetCore.OpenApi >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.3"
