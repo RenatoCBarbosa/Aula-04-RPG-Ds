@@ -8,6 +8,8 @@ using RpgApi.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 
+//apagar depois
+
 namespace RpgApi.Controllers
 {
     [ApiController]
